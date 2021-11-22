@@ -1,39 +1,65 @@
 #include <iostream>
 #include "kuka_control.h"
 #include "robotics_math.h"
+#include "music.h"
 using namespace Eigen;
-void subproblem3(Vector3d r, Vector3d p, Vector3d q, Vector3d w, double delta, vector<double>& theta)
+Vector6D p_start;
+Vector6D p_m1, p_m2, p_m3, p_m4, p_m5, p_m6, p_m7, p_m8;
+vector<Vector6D> p_vec;
+
+void Data_Init()
 {
-    Vector3d u, v, u_, v_;
-    u = p - r;
-    v = q - r;
+    p_start<< 0.0, 0.0, 0.0, 0.0 * M_PI / 180, 0.0 * M_PI / 180, 0.0 * M_PI / 180;
 
-    double tmp = w.transpose() * (p - q);
-    double delta_2 = delta * delta - tmp * tmp;
-
-//    u_ = u - w.transpose() * u * w;
-//    v_ = v - w.transpose() * v * w;
-
-    u_ = u - w * w.transpose() * u;
-    v_ = v - w * w.transpose() * v;
-
-    double th0 = atan2(w.transpose() * u_.cross(v_), u_.transpose() * v_);
-
-    double u_n2 = u_.dot(u_);
-    double v_n2 = v_.dot(v_);
-
-    double th_ = (u_n2 + v_n2 - delta_2) / sqrt(4 * u_n2 * v_n2);
-
-    theta.emplace_back(180 / M_PI * (th0 - acos(th_)));
-    theta.emplace_back(180 / M_PI * (th0 + acos(th_)));
-
+    p_m1 << 0.0, 0.0, 0.0, 0.0 * M_PI / 180, 0.0 * M_PI / 180, 0.0 * M_PI / 180;
+    p_vec.push_back(p_m1);
+    p_m2 << 0.0, 0.0, 0.0, 0.0 * M_PI / 180, 0.0 * M_PI / 180, 0.0 * M_PI / 180;
+    p_vec.push_back(p_m2);
+    p_m3 << 0.0, 0.0, 0.0, 0.0 * M_PI / 180, 0.0 * M_PI / 180, 0.0 * M_PI / 180;
+    p_vec.push_back(p_m3);
+    p_m4 << 0.0, 0.0, 0.0, 0.0 * M_PI / 180, 0.0 * M_PI / 180, 0.0 * M_PI / 180;
+    p_vec.push_back(p_m4);
+    p_m5 << 0.0, 0.0, 0.0, 0.0 * M_PI / 180, 0.0 * M_PI / 180, 0.0 * M_PI / 180;
+    p_vec.push_back(p_m5);
+    p_m6 << 0.0, 0.0, 0.0, 0.0 * M_PI / 180, 0.0 * M_PI / 180, 0.0 * M_PI / 180;
+    p_vec.push_back(p_m6);
+    p_m7 << 0.0, 0.0, 0.0, 0.0 * M_PI / 180, 0.0 * M_PI / 180, 0.0 * M_PI / 180;
+    p_vec.push_back(p_m7);
+    p_m8 << 0.0, 0.0, 0.0, 0.0 * M_PI / 180, 0.0 * M_PI / 180, 0.0 * M_PI / 180;
+    p_vec.push_back(p_m8);
 }
+
 /*
- * Input: ZYZ Eular angle
- *
+ * Input: XYZ m ZYZ Eular angle rad
  */
 int main() {
+    // 0. data init
+    Data_Init();
+
+    // 1. joint convert
     KUKA_CONTROL kuka_control;
+    vector<Vector6D> th_vec;
+    for (int i = 0; i < p_vec.size(); ++i)
+    {
+        Vector6D th;
+        kuka_control.InverseKinematics(p_vec[i], th);
+        th_vec.push_back(th);
+    }
+
+    //2. planning
+    for (int i = 0; i < MUSIC_SIZE + 1; ++i)
+    {
+        Vector6D th1, th2;
+        th1 = th_vec[music[i]];
+        th2 = th_vec[music[i + 1]];
+        // LBPT --> data_i.txt file
+        // pass
+    }
+
+    return 0;
+}
+
+
 //    Eigen::Vector3d w(0, 0, 1);
 //    Eigen::Vector3d r(0, 2, 0);
 //    double angle = 45.0 / 180.0 * M_PI;
@@ -43,16 +69,16 @@ int main() {
 //    std::cout<<"angle: "<<angle<<std::endl;
 
 
-    Vector6D th, th1, pos;
+//Vector6D th, th1, pos;
 //    th << 29.27, -2.795, 89.227, -0.691,92.67, 183.769;
 //    th = th * M_PI / 180;
 //    kuka_control.ForwardKinematics(th, pos);
 
 //    pos << 0.415746, -0.219622, 0.920636, -29.489 * M_PI / 180, 178.867 * M_PI / 180, -33.751 * M_PI / 180;
 //    pos << 0.555893, -0.054405, 0.920636, -8.288 * M_PI / 180, 178.867 * M_PI / 180, -33.751 * M_PI / 180;
-    pos << 0.374286, -0.208621, 0.884491, -8.287 * M_PI / 180, 178.867 * M_PI / 180, -33.751 * M_PI / 180;
-    kuka_control.InverseKinematics(pos, th1);
-    std::cout<<"th: "<<th1 * 180 / M_PI<<std::endl;
+//pos << 0.374286, -0.208621, 0.884491, -8.287 * M_PI / 180, 178.867 * M_PI / 180, -33.751 * M_PI / 180;
+//kuka_control.InverseKinematics(pos, th1);
+//std::cout<<"th: "<<th1 * 180 / M_PI<<std::endl;
 
 //    Vector6D pos, th;
 //        pos << 0, 0, 1.475, 0, 0, -180 * M_PI / 180;
@@ -75,8 +101,6 @@ int main() {
 //    std::cout<<"th: "<<th<<std::endl;
 //    vector<double> theta;
 //    subproblem3(r, p, q, w, delta, theta);
-    return 0;
-}
 
 //    Eigen::Vector3d p(0, 1, 1);
 //    Eigen::Vector3d q(1, 1, 0);

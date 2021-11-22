@@ -8,6 +8,7 @@ bool Vector2SkewSymmetric(Eigen::Vector3d w, Eigen::Matrix3d &w_hat)
     w_hat<<0, -w(2), w(1),
     w(2), 0, -w(0),
     -w(1), w(0), 0;
+    return true;
 }
 
 bool AxisAngle2Rorarion(Eigen::Vector3d w, double angle, Eigen::Matrix3d &R)
@@ -19,6 +20,7 @@ bool AxisAngle2Rorarion(Eigen::Vector3d w, double angle, Eigen::Matrix3d &R)
 //    std::cout<<"w_hat:"<<w_hat<<std::endl;
 
     R = I_33 + w_hat * sin(angle) + w_hat * w_hat * (1 - cos(angle));
+    return true;
 }
 
 bool se32translation(Eigen::Vector3d w, Eigen::Vector3d v, Eigen::Matrix3d R, double angle, Eigen::Vector3d &t)
@@ -28,6 +30,7 @@ bool se32translation(Eigen::Vector3d w, Eigen::Vector3d v, Eigen::Matrix3d R, do
     Vector2SkewSymmetric(w, w_hat);
 
     t = ((I_33 - R) * w_hat + w * w.transpose() * angle) * v;
+    return true;
 }
 
 bool se32SE3(Eigen::Vector3d w, Eigen::Vector3d r, double angle, Eigen::Matrix3d &R, Eigen::Vector3d &t)
@@ -42,6 +45,7 @@ bool se32SE3(Eigen::Vector3d w, Eigen::Vector3d r, double angle, Eigen::Matrix3d
 
     //t
     se32translation(w, v, R, angle, t);
+    return true;
 }
 
 bool se32SE3Full(Eigen::Vector3d w, Eigen::Vector3d r, double angle, Eigen::Isometry3d &T)

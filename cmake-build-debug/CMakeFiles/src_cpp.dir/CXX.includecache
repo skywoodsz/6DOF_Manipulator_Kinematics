@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/kuka_control.cpp
+kuka_control.h
+/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/kuka_control.h
+
 /home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/kuka_control.h
 vector
 -
@@ -19,14 +23,6 @@ Eigen/Dense
 -
 math.h
 -
-robotics_math.h
-/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/robotics_math.h
-
-/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/main.cpp
-iostream
--
-kuka_control.h
-/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/kuka_control.h
 robotics_math.h
 /home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/robotics_math.h
 

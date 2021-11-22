@@ -57,8 +57,8 @@ bool KUKA_CONTROL::ForwardKinematics(Vector6D th, Vector6D &pos)
 //    std::cout<<"w6: "<<w6<<std::endl;
 //    std::cout<<"pw: "<<pw<<std::endl;
 
-    std::cout<<"gst: "<<std::endl;
-    std::cout<<gst.matrix()<<std::endl;
+//    std::cout<<"gst: "<<std::endl;
+//    std::cout<<gst.matrix()<<std::endl;
 
 //    std::cout<<"gst_0: "<<std::endl;
 //    std::cout<<gst_0.matrix()<<std::endl;
@@ -89,8 +89,8 @@ bool KUKA_CONTROL::InverseKinematics(Vector6D pos, Vector6D &th)
     gd.rotate(r_vecd_pitch);
     gd.rotate(r_vecd_roll);
     gd.pretranslate(td);
-    std::cout<<"gd:"<<std::endl;
-    std::cout<<gd.matrix()<<std::endl;
+//    std::cout<<"gd:"<<std::endl;
+//    std::cout<<gd.matrix()<<std::endl;
 
     // debug
 //    gd = gst;
@@ -109,7 +109,7 @@ bool KUKA_CONTROL::InverseKinematics(Vector6D pos, Vector6D &th)
     // 3. pw --> th1, th2
     Eigen::Isometry3d g_w3 = Eigen::Isometry3d::Identity();
     se32SE3Full(w3, p2, th3, g_w3);
-    std::cout<<"g_w3 "<<g_w3.matrix()<<std::endl;
+//    std::cout<<"g_w3 "<<g_w3.matrix()<<std::endl;
 
     p = g_w3 * pw;
     q = g1 * pw;

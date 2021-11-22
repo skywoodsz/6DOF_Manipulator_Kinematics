@@ -197,6 +197,7 @@ CMakeFiles/src_cpp.dir/kuka_control.cpp.o: \
 CMakeFiles/src_cpp.dir/main.cpp.o: \
  ../kuka_control.h \
  ../main.cpp \
+ ../music.h \
  ../robotics_math.h \
  /usr/include/eigen3/Eigen/Cholesky \
  /usr/include/eigen3/Eigen/Core \

@@ -95,6 +95,9 @@
 		<Unit filename="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/main.cpp">
 			<Option target="src_cpp"/>
 		</Unit>
+		<Unit filename="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/music.h">
+			<Option target="src_cpp"/>
+		</Unit>
 		<Unit filename="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/robotics_math.cpp">
 			<Option target="src_cpp"/>
 		</Unit>
