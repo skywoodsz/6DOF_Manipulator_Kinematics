@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="src_cpp"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\eigen3\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="src_cpp">
+				<Option output="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/src_cpp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 src_cpp"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="src_cpp/fast">
+				<Option output="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/src_cpp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 src_cpp/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/kuka_control.cpp">
+			<Option target="src_cpp"/>
+		</Unit>
+		<Unit filename="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/kuka_control.h">
+			<Option target="src_cpp"/>
+		</Unit>
+		<Unit filename="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/main.cpp">
+			<Option target="src_cpp"/>
+		</Unit>
+		<Unit filename="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/robotics_math.cpp">
+			<Option target="src_cpp"/>
+		</Unit>
+		<Unit filename="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/robotics_math.h">
+			<Option target="src_cpp"/>
+		</Unit>
+		<Unit filename="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/../../../../../../../usr/lib/cmake/eigen3/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
