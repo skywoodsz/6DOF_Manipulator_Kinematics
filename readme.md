@@ -6,6 +6,7 @@ We use the *POE* and the *Paden-Kahan subproblem* to solve the forward kinematic
 Eigen3  only  
 
 ## 3. 运行  Run    
-`kuka_control.cpp/h: 6DOF kinematics class  
-  
-robotics_math.cpp/h: robotics math function`
+```
+    kuka_control.cpp/h: 6DOF kinematics class
+    robotics_math.cpp/h: robotics math function
+```
