@@ -6,7 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/kuka_control.cpp
+/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/MotionPlan.cpp
+iostream
+-
+fstream
+-
+MotionPlan.h
+/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/MotionPlan.h
+algorithm
+-
+eigen3/Eigen/Dense
+/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/eigen3/Eigen/Dense
+
+/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/MotionPlan.h
+vector
+-
 kuka_control.h
 /home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/kuka_control.h
 

@@ -86,6 +86,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/MotionPlan.cpp">
+			<Option target="src_cpp"/>
+		</Unit>
+		<Unit filename="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/MotionPlan.h">
+			<Option target="src_cpp"/>
+		</Unit>
 		<Unit filename="/home/skywoodsz/roboticshs_ws/src/marm_control/src/src_cpp/kuka_control.cpp">
 			<Option target="src_cpp"/>
 		</Unit>

@@ -85,6 +85,7 @@ bool KUKA_CONTROL::InverseKinematics(Vector6D pos, Vector6D &th)
     Eigen::AngleAxisd r_vecd_roll(pos(5), Eigen::Vector3d(0, 0, 1));
     Eigen::Vector3d td(pos(0), pos(1), pos(2));
 
+    gd = Eigen::Isometry3d::Identity();
     gd.rotate(r_vecd_yaw);
     gd.rotate(r_vecd_pitch);
     gd.rotate(r_vecd_roll);
@@ -153,7 +154,7 @@ bool KUKA_CONTROL::InverseKinematics(Vector6D pos, Vector6D &th)
     p = p7; q = g3 * p7; r = p6;
     PKSubProblem1(p, q, w6, r, th6);
 
-    th << th1, th2, th3, th4, th5, th6;
+    th << th1, th2, th3, th4, th5, th6 + 2 * M_PI;
 
     return true;
 }

@@ -129,6 +129,30 @@ src_cpp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/src_cpp.dir/build.make CMakeFiles/src_cpp.dir/build
 .PHONY : src_cpp/fast
 
+MotionPlan.o: MotionPlan.cpp.o
+.PHONY : MotionPlan.o
+
+# target to build an object file
+MotionPlan.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src_cpp.dir/build.make CMakeFiles/src_cpp.dir/MotionPlan.cpp.o
+.PHONY : MotionPlan.cpp.o
+
+MotionPlan.i: MotionPlan.cpp.i
+.PHONY : MotionPlan.i
+
+# target to preprocess a source file
+MotionPlan.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src_cpp.dir/build.make CMakeFiles/src_cpp.dir/MotionPlan.cpp.i
+.PHONY : MotionPlan.cpp.i
+
+MotionPlan.s: MotionPlan.cpp.s
+.PHONY : MotionPlan.s
+
+# target to generate assembly for a file
+MotionPlan.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/src_cpp.dir/build.make CMakeFiles/src_cpp.dir/MotionPlan.cpp.s
+.PHONY : MotionPlan.cpp.s
+
 kuka_control.o: kuka_control.cpp.o
 .PHONY : kuka_control.o
 
@@ -210,6 +234,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... src_cpp"
+	@echo "... MotionPlan.o"
+	@echo "... MotionPlan.i"
+	@echo "... MotionPlan.s"
 	@echo "... kuka_control.o"
 	@echo "... kuka_control.i"
 	@echo "... kuka_control.s"
